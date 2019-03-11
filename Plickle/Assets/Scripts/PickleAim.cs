@@ -6,7 +6,7 @@ public class PickleAim : MonoBehaviour
 {
 
     // public method and put our information into public
-    public Ray GetRay()
+    public Ray GetAimRay()
     {
         // defines camera and tells it to get info from the camera
         Camera pickleCamera = GetComponent<Camera>();

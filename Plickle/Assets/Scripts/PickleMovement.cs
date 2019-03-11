@@ -17,7 +17,8 @@ public class PickleMovement : MonoBehaviour
         {
             // use rigidbodies and get the rigidebody component to add a force
             Rigidbody rb = GetComponent<Rigidbody>();
-            rb.AddForce(new Vector3(0, 0, force), ForceMode.Impulse);
+            // rigid body will have go along the forward axis multiple by force in an impulse
+            rb.AddForce(transform.forward * force, ForceMode.Impulse);
             // change the bool to saying it has launched
             pickleHasLaunched = true;
         }

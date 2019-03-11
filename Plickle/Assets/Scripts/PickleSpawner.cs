@@ -6,6 +6,8 @@ public class PickleSpawner : MonoBehaviour
 {
     //need a prefeab to instantiate
     public GameObject prefab;
+    // add public variable of the PickleAim
+    public PickleAim aimComponent;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,10 @@ public class PickleSpawner : MonoBehaviour
         // if the mouse is down, fire a pickle
         if (mouseDown)
         {
-            Instantiate(prefab, transform.position, transform.rotation);
+            Ray aimPickle = aimComponent.GetAimRay();
+            // Quaternion variable that takes the rotation of where we look and aims the ray in that direction
+            Quaternion pickleRotation = Quaternion.LookRotation(aimPickle.direction);
+            Instantiate(prefab, transform.position, pickleRotation);
         }
 
     }
