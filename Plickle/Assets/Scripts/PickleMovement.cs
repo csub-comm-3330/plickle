@@ -24,4 +24,9 @@ public class PickleMovement : MonoBehaviour
         }
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 }

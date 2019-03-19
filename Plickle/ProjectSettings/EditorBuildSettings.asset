@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5cd55bb73d94a4b4a8ca57d522484cde
+  - enabled: 1
+    path: Assets/Scenes/PlickleGame.unity
+    guid: fb8f47d6b491aef4fbe1ddf3ded1e3a9
   m_configObjects: {}

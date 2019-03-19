@@ -8,5 +8,6 @@ public class ScoreScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("Score!");
+        ScoreCounter.scoreValue += 1;
     }
 }
